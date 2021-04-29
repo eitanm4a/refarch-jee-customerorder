@@ -32,6 +32,33 @@
       <type>war</type>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>artifactory-oss-0-releases</name>
+        <url>http://34.66.210.178:80/artifactory/m4a-blueprints</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>artifactory-oss-0-snapshots</name>
+        <url>http://34.66.210.178:80/artifactory/m4a-blueprints</url>
+    </snapshotRepository>
+</distributionManagement>
+
+<repositories>
+  <repository>
+    <id>artifactory-oss-0</id>
+    <url>http://34.66.210.178:80/artifactory/m4a-blueprints/</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+
   <build>
     <finalName>${project.artifactId}-${project.version}-${maven.build.timestamp}</finalName>
     <plugins>
